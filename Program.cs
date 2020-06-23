@@ -17,8 +17,6 @@ namespace SelectionStatements
             var random = new Random();
             var number = random.Next(1, upperLimit);
 
-            Console.WriteLine("Input your guess:");
-
             var guess = int.Parse(Console.ReadLine());
 
             if(guess < number)
@@ -33,6 +31,40 @@ namespace SelectionStatements
             {
                 Console.WriteLine("Nevermind!");
             }
+
+
+            Console.WriteLine("What's your favorite school subject?");
+
+            var subject = Console.ReadLine();
+
+            switch (subject)
+            {
+                case "Math":
+                    Console.WriteLine("Math is a tough subject");
+                    break;
+                case "Science":
+                    Console.WriteLine("Science is an awesome subject!");
+                    break;
+                case "English":
+                    Console.WriteLine("English is an awesome subject!");
+                    break;
+                case "Chemistry":
+                    Console.WriteLine("Chemistry is a boring subject!");
+                    break;
+                case "Reading":
+                    Console.WriteLine("Reading is good for the soul!");
+                    break;
+                case "Computer Class":
+                    Console.WriteLine("You are a smart cookie!");
+                    break;
+                default:
+                    Console.WriteLine($"I guess {subject} is cool too!");
+                    break;
+            }
+
+
+
+
         }
     }
 }
